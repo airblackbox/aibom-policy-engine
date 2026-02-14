@@ -1,0 +1,35 @@
+{
+  "name": "ai-governance",
+  "description": "Enterprise AI supply chain governance policy",
+  "rules": [
+    {
+      "type": "allowed-providers",
+      "severity": "critical",
+      "params": { "providers": ["openai", "anthropic", "google"] }
+    },
+    {
+      "type": "deny-tool",
+      "severity": "critical",
+      "params": { "tool_name": "exec_sql", "reason": "direct SQL execution not allowed" }
+    },
+    {
+      "type": "require-all-models-versioned",
+      "severity": "high"
+    },
+    {
+      "type": "max-models",
+      "severity": "medium",
+      "params": { "max": 5 }
+    },
+    {
+      "type": "max-tools",
+      "severity": "medium",
+      "params": { "max": 10 }
+    },
+    {
+      "type": "deny-external-endpoints",
+      "severity": "high",
+      "params": { "allowed_hosts": ["api.openai.com", "api.anthropic.com", "generativelanguage.googleapis.com"] }
+    }
+  ]
+}
