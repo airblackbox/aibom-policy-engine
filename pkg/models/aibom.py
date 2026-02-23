@@ -1,6 +1,6 @@
 """AIBOM data models."""
 from __future__ import annotations
-from datetime import datetime
+from datetime import datetime, timezone
 from enum import Enum
 from typing import Any
 from pydantic import BaseModel, Field
@@ -40,7 +40,7 @@ class AIBOM(BaseModel):
     id: str = ""
     name: str
     version: str = "1.0"
-    created_at: datetime = Field(default_factory=datetime.utcnow)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     organization: str = ""
     components: list[AIComponent] = Field(default_factory=list)
     dependencies: list[dict[str, str]] = Field(default_factory=list)
