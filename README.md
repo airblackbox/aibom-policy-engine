@@ -1,5 +1,10 @@
 # AIBOM Policy Engine
 
+[![CI](https://github.com/airblackbox/aibom-policy-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/airblackbox/aibom-policy-engine/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://github.com/airblackbox/aibom-policy-engine/blob/main/LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-3776AB.svg?logo=python&logoColor=white)](https://python.org)
+
+
 AI Bill of Materials (AIBOM) generation and validation engine. Creates structured inventories of all AI components in a system (models, tools, data sources, policies).
 
 ## Features
